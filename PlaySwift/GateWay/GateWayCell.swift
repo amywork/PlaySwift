@@ -14,6 +14,8 @@ class GateWayCell: GlobalCollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
     
+    @IBOutlet weak var decoView: UIView!
+    
     var eventClosure: (() -> ())?
     
     @IBAction func on(_ sender: UIButton) {

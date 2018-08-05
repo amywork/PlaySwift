@@ -38,6 +38,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gX2-J7-XHB">
                                                     <rect key="frame" x="0.0" y="0.0" width="8" height="106"/>
                                                     <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="tintColor" red="0.81568627450980391" green="0.16470588235294117" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="8" id="7WI-ay-g5l"/>
                                                     </constraints>
@@ -80,6 +81,7 @@
                                             <constraint firstAttribute="bottom" secondItem="gX2-J7-XHB" secondAttribute="bottom" id="pjY-ZS-0yt"/>
                                         </constraints>
                                         <connections>
+                                            <outlet property="decoView" destination="gX2-J7-XHB" id="fE8-Hb-FCa"/>
                                             <outlet property="descLabel" destination="z1f-Ai-muc" id="vZX-Vo-qyf"/>
                                             <outlet property="titleLabel" destination="Rui-DL-9at" id="YLn-Q6-y0x"/>
                                         </connections>

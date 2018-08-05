@@ -16,6 +16,7 @@ struct MetaInfo {
 class GateWayViewController: GlobalViewController {
     
     var data = [MetaInfo]()
+    var colorDic = [UIColor(hex: "#ff0033"), UIColor(hex: "#ffcc00"), UIColor(hex: "#0033ff")]
     
     enum Section: Int {
         case header
@@ -28,6 +29,8 @@ class GateWayViewController: GlobalViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data.append(MetaInfo(title: "Drop Down", desc: "From https://github.com/maxkonovalov/MKDropdownMenu"))
+        data.append(MetaInfo(title: "Parallax Effect", desc: "Copying opensource https://github.com/CSStickyHeaderFlowLayout/CSStickyHeaderFlowLayout"))
         data.append(MetaInfo(title: "Swipe Menu", desc: "Copying opensource https://github.com/yysskk/SwipeMenuViewController"))
     }
 
@@ -53,6 +56,10 @@ extension GateWayViewController: UICollectionViewDelegateFlowLayout, UICollectio
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let sectionKey = Section(rawValue: indexPath.section) else {
             return collectionView.dequeueReusableCell(UICollectionViewCell.self, for: indexPath)
@@ -67,6 +74,7 @@ extension GateWayViewController: UICollectionViewDelegateFlowLayout, UICollectio
                 self.navigationController?.pushViewController(swipeVC, animated: true)
             }
             cell.eventClosure = event
+            cell.decoView.backgroundColor = colorDic[indexPath.item]
             return cell
         }
     }
