@@ -1,0 +1,15 @@
+//
+//  SwipeMenuView.swift
+//  PlaySwift
+//
+//  https://github.com/yysskk/SwipeMenuViewController
+//
+
+import UIKit
+import Foundation
+
+class SwipeMenuView: UIView {
+    
+    var contentScrollView = ContentScrollView()
+    
+}
