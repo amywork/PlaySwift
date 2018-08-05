@@ -11,7 +11,17 @@ import Foundation
 
 class GateWayCell: GlobalCollectionViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descLabel: UILabel!
+    
+    var eventClosure: (() -> ())?
+    
+    @IBAction func on(_ sender: UIButton) {
+        eventClosure?()
+    }
+ 
     override func configure(_ data: Any?) {
         
     }
 }
+

@@ -8,7 +8,14 @@
 
 import UIKit
 
+struct MetaInfo {
+    var title = ""
+    var desc = ""
+}
+
 class GateWayViewController: GlobalViewController {
+    
+    var data = [MetaInfo]()
     
     enum Section: Int {
         case header
@@ -21,6 +28,7 @@ class GateWayViewController: GlobalViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        data.append(MetaInfo(title: "Swipe Menu", desc: "Copying opensource https://github.com/yysskk/SwipeMenuViewController"))
     }
 
 }
@@ -37,7 +45,7 @@ extension GateWayViewController: UICollectionViewDelegateFlowLayout, UICollectio
         case .header:
             return 0
         case .body:
-            return 1
+            return data.count
         case .footer:
             return 0
         default:
@@ -52,6 +60,13 @@ extension GateWayViewController: UICollectionViewDelegateFlowLayout, UICollectio
         switch sectionKey {
         default:
             let cell = collectionView.dequeueReusableCell(GateWayCell.self, for: indexPath)
+            cell.titleLabel.text = data[indexPath.item].title
+            cell.descLabel.text = data[indexPath.item].desc
+            let event = {
+                let swipeVC = SwipeViewController()
+                self.navigationController?.pushViewController(swipeVC, animated: true)
+            }
+            cell.eventClosure = event
             return cell
         }
     }

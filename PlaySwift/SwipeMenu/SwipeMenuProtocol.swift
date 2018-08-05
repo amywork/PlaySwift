@@ -25,3 +25,9 @@ extension SwipeMenuViewDelegate {
     public func swipeMenuView(_ swipeMenuView: SwipeMenuView, willChangeIndexFrom fromIndex: Int, to toIndex: Int) { }
     public func swipeMenuView(_ swipeMenuView: SwipeMenuView, didChangeIndexFrom fromIndex: Int, to toIndex: Int) { }
 }
+
+protocol SwipeMenuViewDataSource: class {
+    func numberOfPages(in swipeMenuView: SwipeMenuView) -> Int
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, titleForPageAt index: Int) -> String
+    func swipeMenuView(_ swipeMenuView: SwipeMenuView, viewControllerForPageAt index: Int) -> GlobalViewController
+}

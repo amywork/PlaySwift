@@ -59,16 +59,30 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MuA-sG-M4w">
+                                                    <rect key="frame" x="8" y="28" width="359" height="70"/>
+                                                    <connections>
+                                                        <action selector="on:" destination="sOR-LV-ivh" eventType="touchUpInside" id="lKj-84-1I7"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="MuA-sG-M4w" firstAttribute="leading" secondItem="gX2-J7-XHB" secondAttribute="trailing" id="29w-dh-21c"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="MuA-sG-M4w" secondAttribute="bottom" id="4Jc-5Z-W5X"/>
                                             <constraint firstItem="gX2-J7-XHB" firstAttribute="leading" secondItem="sOR-LV-ivh" secondAttribute="leading" id="AOG-91-fRa"/>
                                             <constraint firstItem="iuY-0O-Lco" firstAttribute="leading" secondItem="gX2-J7-XHB" secondAttribute="trailing" constant="22" id="JYw-Xg-vCX"/>
                                             <constraint firstAttribute="trailing" secondItem="iuY-0O-Lco" secondAttribute="trailing" constant="50" id="Vkm-lW-UQZ"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="MuA-sG-M4w" secondAttribute="trailing" id="lny-5F-c1g"/>
                                             <constraint firstItem="gX2-J7-XHB" firstAttribute="top" secondItem="sOR-LV-ivh" secondAttribute="top" id="mJC-4R-tmM"/>
                                             <constraint firstItem="iuY-0O-Lco" firstAttribute="centerY" secondItem="sOR-LV-ivh" secondAttribute="centerY" id="nH9-nQ-mWX"/>
+                                            <constraint firstItem="MuA-sG-M4w" firstAttribute="top" secondItem="sOR-LV-ivh" secondAttribute="topMargin" id="oFd-Bq-cci"/>
                                             <constraint firstAttribute="bottom" secondItem="gX2-J7-XHB" secondAttribute="bottom" id="pjY-ZS-0yt"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="descLabel" destination="z1f-Ai-muc" id="vZX-Vo-qyf"/>
+                                            <outlet property="titleLabel" destination="Rui-DL-9at" id="YLn-Q6-y0x"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
