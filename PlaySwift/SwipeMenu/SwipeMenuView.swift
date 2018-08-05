@@ -33,7 +33,7 @@ class SwipeMenuView: UIView {
     func layout(contentScrollView: ContentScrollView) {
         contentScrollView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            //contentScrollView.topAnchor.constraint(equalTo: self.topAnchor, constant: options.tabView.height),
+            contentScrollView.topAnchor.constraint(equalTo: self.topAnchor/*, constant: options.tabView.height*/),
             contentScrollView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             contentScrollView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             contentScrollView.bottomAnchor.constraint(equalTo: self.bottomAnchor)

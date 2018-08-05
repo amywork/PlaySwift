@@ -67,7 +67,7 @@ class ContentScrollView: UIScrollView {
         guard let dataSource = self.dataSource, dataSource.numberOfPages(in: self) > 0 else { return }
         self.contentSize = CGSize(width: self.frame.width * CGFloat(dataSource.numberOfPages(in: self)), height: self.frame.height)
         
-        for i in 0...dataSource.numberOfPages(in: self) {
+        for i in 0..<dataSource.numberOfPages(in: self) {
             guard let pageView = dataSource.contentScrollView(self, viewForPageAt: i) else { return }
             self.pageViews.append(pageView)
             self.addSubview(pageView)
